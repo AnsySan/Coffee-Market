@@ -101,7 +101,7 @@ public class UserSecurityEndpoint implements SecurityApi {
         log.info("Received forgot password request for user");
         UserDto userDto = singleUserProvider.getUserByEmail(request.getEmail());
         UserRegistrationRequest requestVerification =
-                new UserRegistrationRequest(userDto.getFirstName(), userDto.getLastName(), userDto.getEmail(), "");
+                new UserRegistrationRequest(userDto.getFirstName(), userDto.getLastName(), userDto.getEmail(), userDto.getPassword());
         emailTokenSender.sendEmailVerificationCode(requestVerification);
         log.info("Send email with verification code for user");
         return ResponseEntity.ok().build();

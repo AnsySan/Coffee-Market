@@ -1,6 +1,8 @@
 package com.ansysan.coffeemarket.user.api;
 
+import com.ansysan.coffeemarket.openapi.dto.ChangeUserPasswordRequest;
 import com.ansysan.coffeemarket.openapi.dto.UserDto;
+import com.ansysan.coffeemarket.security.api.SecurityPrincipalProvider;
 import com.ansysan.coffeemarket.user.exception.InvalidOldPasswordException;
 import com.ansysan.coffeemarket.user.repository.UserRepository;
 import lombok.RequiredArgsConstructor;

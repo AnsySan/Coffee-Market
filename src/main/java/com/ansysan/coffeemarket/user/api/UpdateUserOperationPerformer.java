@@ -1,5 +1,6 @@
 package com.ansysan.coffeemarket.user.api;
 
+import com.ansysan.coffeemarket.security.api.SecurityPrincipalProvider;
 import com.ansysan.coffeemarket.user.converter.AddressDtoConverter;
 import com.ansysan.coffeemarket.user.converter.UserDtoConverter;
 import com.ansysan.coffeemarket.openapi.dto.AddressDto;
