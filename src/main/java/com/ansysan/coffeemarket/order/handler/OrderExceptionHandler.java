@@ -15,7 +15,7 @@ import org.springframework.web.method.annotation.MethodArgumentTypeMismatchExcep
 import java.util.Arrays;
 
 @Slf4j
-@RestControllerAdvice(basePackages = {"com.nespresso.order.endpoint"})
+@RestControllerAdvice(basePackages = {"com.nespresso.order.controller"})
 @RequiredArgsConstructor
 public class OrderExceptionHandler {
 

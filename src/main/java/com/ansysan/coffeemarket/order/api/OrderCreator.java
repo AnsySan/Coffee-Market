@@ -1,5 +1,7 @@
 package com.ansysan.coffeemarket.order.api;
 
+import com.ansysan.coffeemarket.cart.api.ShoppingCartProvider;
+import com.ansysan.coffeemarket.cart.repository.ShoppingCartRepository;
 import com.ansysan.coffeemarket.openapi.dto.OrderStatus;
 import com.ansysan.coffeemarket.openapi.dto.ShoppingCartDto;
 import com.ansysan.coffeemarket.order.converter.OrderDtoConverter;

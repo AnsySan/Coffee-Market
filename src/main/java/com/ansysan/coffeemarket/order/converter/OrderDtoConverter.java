@@ -1,5 +1,6 @@
 package com.ansysan.coffeemarket.order.converter;
 
+import com.ansysan.coffeemarket.openapi.dto.OrderDto;
 import com.ansysan.coffeemarket.openapi.dto.OrderStatus;
 import com.ansysan.coffeemarket.openapi.dto.ShoppingCartItemDto;
 import com.ansysan.coffeemarket.order.entity.Order;
@@ -10,7 +11,6 @@ import org.mapstruct.Mapping;
 import org.mapstruct.MappingConstants;
 import org.mapstruct.Named;
 import org.mapstruct.ReportingPolicy;
-import org.springframework.data.domain.jaxb.SpringDataJaxb;
 
 
 @Mapper(componentModel = MappingConstants.ComponentModel.SPRING,
@@ -19,7 +19,7 @@ import org.springframework.data.domain.jaxb.SpringDataJaxb;
         uses = {OrderStatus.class})
 public interface OrderDtoConverter {
 
-    SpringDataJaxb.OrderDto toResponseDto(final Order orderEntity);
+    OrderDto toResponseDto(final Order orderEntity);
 
     @Named("toOrderItemDto")
     @Mapping(target = "id", ignore = true)
